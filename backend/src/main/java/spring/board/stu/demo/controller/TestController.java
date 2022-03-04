@@ -12,6 +12,6 @@ public class TestController {
 
     @GetMapping("/home")
     public String home() {
-        return "현재 시간은 " + new Date();
+        return "현재 시간은 " + new Date() +" 입니다.";
     }
 }
