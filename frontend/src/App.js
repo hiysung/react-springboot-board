@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from 'components/Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [isLogin, setIsLogin] = useState(false);
   useEffect(() => {
-    fetch("/home").then(response => response.text()).then(message => {
-      console.log(message);
-      setMessage(message);
-    });
+    // fetch("/login").then(response => response.json()).then(response => {
+    //   setIsLogin(response.isLogin);
+    // });
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>{message}</h1>
-      </header>
+    <div>
+      {isLogin ? null : <div><Login /></div>}
     </div>
   );
 }
