@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import styles from "css/Login/Login.module.css";
 import { Col, Row } from "react-bootstrap";
+import axios from "axios";
 
 function SignUp(props) {
   const [userId, setUserId] = useState("");
@@ -30,7 +31,32 @@ function SignUp(props) {
         return false;
     }
 
+    registerUser();
+  }
+
+  const registerUser = async () => {
+    let response, data;
+
+    try {
+      response = await axios.post("http://localhost:3000/user/register", {
+          id : userId
+        , name : userName
+        , pw : userPwd
+        , bday : userBday
+        , sex : userSex
+        , tel : userTel
+      });
+
+      data = await response.data;
+    }
+    catch(error) {
+      console.log(error);
+    }
     
+  }
+
+  const onBack = () => {
+
   }
 
   const getUserId = (e) => {
@@ -125,7 +151,7 @@ function SignUp(props) {
           <Form.Group className="mb-3" controlId="userTel">
             <Form.Label>전화번호</Form.Label>
             <Form.Control
-              type="password"
+              type="text"
               placeholder="숫자만 입력해주세요."
               value={userTel}
               onChange={getUserTel}
@@ -138,7 +164,7 @@ function SignUp(props) {
               </Button>
             </Form.Group>
             <Form.Group as={Col} className="d-grid">
-              <Button variant="secondary" type="button" onClick={""}>
+              <Button variant="secondary" type="button" onClick={onBack}>
                 취소
               </Button>
             </Form.Group>

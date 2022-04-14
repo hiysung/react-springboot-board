@@ -11,8 +11,8 @@ function App() {
   const [isLogin, setIsLogin] = useState(false);
   
   useEffect(() => {
-    // fetch("/login").then(response => response.json()).then(response => {
-    //   setIsLogin(response.isLogin);
+    // fetch("/home").then(response => response.text()).then(response => {
+    //   console.log(response);
     // });
   }, []);
   return (
