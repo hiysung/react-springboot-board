@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController()
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/account")
+public class AccountController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public Map<String, Object> registerUser(@RequestBody Map<String, Object> paramMap) throws Exception {

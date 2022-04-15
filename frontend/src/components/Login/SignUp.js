@@ -38,7 +38,7 @@ function SignUp(props) {
     let response, data;
 
     try {
-      response = await axios.post("http://localhost:3000/user/register", {
+      response = await axios.post("/account/register", {
           id : userId
         , name : userName
         , pw : userPwd
