@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="spring.board.stu.demo.AccountRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-15T16:14:24" hostname="DESKTOP-RLB3M5Q" time="0.348">
+  <properties/>
+  <testcase name="registerAccount()" classname="spring.board.stu.demo.AccountRepositoryTest" time="0.348"/>
+  <system-out><![CDATA[01:14:20.326 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+01:14:20.336 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+01:14:20.368 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [spring.board.stu.demo.AccountRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+01:14:20.380 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [spring.board.stu.demo.AccountRepositoryTest], using SpringBootContextLoader
+01:14:20.383 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [spring.board.stu.demo.AccountRepositoryTest]: class path resource [spring/board/stu/demo/AccountRepositoryTest-context.xml] does not exist
+01:14:20.384 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [spring.board.stu.demo.AccountRepositoryTest]: class path resource [spring/board/stu/demo/AccountRepositoryTestContext.groovy] does not exist
+01:14:20.384 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [spring.board.stu.demo.AccountRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+01:14:20.385 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [spring.board.stu.demo.AccountRepositoryTest]: AccountRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:14:20.428 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [spring.board.stu.demo.AccountRepositoryTest]
+01:14:20.479 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Programming\Intellij\react-springboot-board\backend\build\classes\java\main\spring\board\stu\demo\DemoApplication.class]
+01:14:20.480 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration spring.board.stu.demo.DemoApplication for test class spring.board.stu.demo.AccountRepositoryTest
+01:14:20.592 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [spring.board.stu.demo.AccountRepositoryTest]: using defaults.
+01:14:20.592 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01:14:20.607 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2575f671, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@329a1243, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@ecf9fb3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2d35442b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@27f9e982, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4593ff34, org.springframework.test.context.transaction.TransactionalTestExecutionListener@37d3d232, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30c0ccff, org.springframework.test.context.event.EventPublishingTestExecutionListener@581d969c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@22db8f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2b46a8c1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d572e62, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29caf222, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@46cf05f7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5851bd4f]
+01:14:20.610 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2d0566ba testClass = AccountRepositoryTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@733037 testClass = AccountRepositoryTest, locations = '{}', classes = '{class spring.board.stu.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7b8233cd, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@73163d48, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@62f4ff3b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@207b8649, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a3c96e3, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@18ece7f4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.4)
+
+2022-04-16 01:14:20.918  INFO 9392 --- [    Test worker] s.board.stu.demo.AccountRepositoryTest   : Starting AccountRepositoryTest using Java 11.0.13 on DESKTOP-RLB3M5Q with PID 9392 (started by SD in D:\Programming\Intellij\react-springboot-board\backend)
+2022-04-16 01:14:20.920  INFO 9392 --- [    Test worker] s.board.stu.demo.AccountRepositoryTest   : No active profile set, falling back to 1 default profile: "default"
+2022-04-16 01:14:21.484  INFO 9392 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-16 01:14:21.531  INFO 9392 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+2022-04-16 01:14:21.992  INFO 9392 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-16 01:14:22.161  INFO 9392 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-16 01:14:22.231  INFO 9392 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-16 01:14:22.289  INFO 9392 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-04-16 01:14:22.459  INFO 9392 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-16 01:14:22.606  INFO 9392 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists account CASCADE 
+Hibernate: 
+    
+    create table account (
+       id varchar(20) not null,
+        bday_ymd varchar(8),
+        del_yn varchar(1),
+        name varchar(200) not null,
+        password varchar(24) not null,
+        sex_cd varchar(1) not null,
+        tel varchar(11),
+        primary key (id)
+    )
+2022-04-16 01:14:23.178  INFO 9392 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-16 01:14:23.186  INFO 9392 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-16 01:14:23.397  WARN 9392 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-16 01:14:24.144  INFO 9392 --- [    Test worker] s.board.stu.demo.AccountRepositoryTest   : Started AccountRepositoryTest in 3.501 seconds (JVM running for 4.985)
+Hibernate: 
+    select
+        accountent0_.id as id1_0_0_,
+        accountent0_.bday_ymd as bday_ymd2_0_0_,
+        accountent0_.del_yn as del_yn3_0_0_,
+        accountent0_.name as name4_0_0_,
+        accountent0_.password as password5_0_0_,
+        accountent0_.sex_cd as sex_cd6_0_0_,
+        accountent0_.tel as tel7_0_0_ 
+    from
+        account accountent0_ 
+    where
+        accountent0_.id=?
+2022-04-16 01:14:24.312 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [hyesung]
+Hibernate: 
+    insert 
+    into
+        account
+        (bday_ymd, del_yn, name, password, sex_cd, tel, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2022-04-16 01:14:24.344 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [19920121]
+2022-04-16 01:14:24.344 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [N]
+2022-04-16 01:14:24.344 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [최혜성]
+2022-04-16 01:14:24.345 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [1234]
+2022-04-16 01:14:24.345 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [M]
+2022-04-16 01:14:24.345 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [VARCHAR] - [01011112222]
+2022-04-16 01:14:24.346 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [hyesung]
+Hibernate: 
+    select
+        accountent0_.id as id1_0_,
+        accountent0_.bday_ymd as bday_ymd2_0_,
+        accountent0_.del_yn as del_yn3_0_,
+        accountent0_.name as name4_0_,
+        accountent0_.password as password5_0_,
+        accountent0_.sex_cd as sex_cd6_0_,
+        accountent0_.tel as tel7_0_ 
+    from
+        account accountent0_
+2022-04-16 01:14:24.483 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [VARCHAR]) - [hyesung]
+2022-04-16 01:14:24.485 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([bday_ymd2_0_] : [VARCHAR]) - [19920121]
+2022-04-16 01:14:24.486 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([del_yn3_0_] : [VARCHAR]) - [N]
+2022-04-16 01:14:24.486 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_0_] : [VARCHAR]) - [최혜성]
+2022-04-16 01:14:24.486 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password5_0_] : [VARCHAR]) - [1234]
+2022-04-16 01:14:24.486 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([sex_cd6_0_] : [VARCHAR]) - [M]
+2022-04-16 01:14:24.486 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([tel7_0_] : [VARCHAR]) - [01011112222]
+Hibernate: 
+    select
+        accountent0_.id as id1_0_,
+        accountent0_.bday_ymd as bday_ymd2_0_,
+        accountent0_.del_yn as del_yn3_0_,
+        accountent0_.name as name4_0_,
+        accountent0_.password as password5_0_,
+        accountent0_.sex_cd as sex_cd6_0_,
+        accountent0_.tel as tel7_0_ 
+    from
+        account accountent0_
+2022-04-16 01:14:24.495 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_0_] : [VARCHAR]) - [hyesung]
+2022-04-16 01:14:24.496 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([bday_ymd2_0_] : [VARCHAR]) - [19920121]
+2022-04-16 01:14:24.496 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([del_yn3_0_] : [VARCHAR]) - [N]
+2022-04-16 01:14:24.497 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name4_0_] : [VARCHAR]) - [최혜성]
+2022-04-16 01:14:24.497 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([password5_0_] : [VARCHAR]) - [1234]
+2022-04-16 01:14:24.497 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([sex_cd6_0_] : [VARCHAR]) - [M]
+2022-04-16 01:14:24.498 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([tel7_0_] : [VARCHAR]) - [01011112222]
+Hibernate: 
+    delete 
+    from
+        account 
+    where
+        id=?
+2022-04-16 01:14:24.502 TRACE 9392 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [hyesung]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
