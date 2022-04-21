@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "css/Login/Login.module.css";
 import { Col, Row } from "react-bootstrap";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SignUp(props) {
   const [userId, setUserId] = useState("");
@@ -14,6 +15,7 @@ function SignUp(props) {
   const [userBday, setUserBday] = useState("");
   const [userSex, setUserSex] = useState("");
   const [userTel, setUserTel] = useState("");
+  const navigate = useNavigate();
 
   const onConfirm = () => {
     if(userId === "") {
@@ -41,13 +43,18 @@ function SignUp(props) {
       response = await axios.post("/account/register", {
           id : userId
         , name : userName
-        , pw : userPwd
-        , bday : userBday
-        , sex : userSex
+        , password : userPwd
+        , bdayYmd : userBday
+        , sexCd : userSex
         , tel : userTel
+        , delYn : 'N'
       });
 
       data = await response.data;
+      
+      if(data.isSuccess === "SUCCESS" && data.id !== "") {
+        navigate("/login");
+      }
     }
     catch(error) {
       console.log(error);
@@ -56,7 +63,7 @@ function SignUp(props) {
   }
 
   const onBack = () => {
-
+    navigate("/login");
   }
 
   const getUserId = (e) => {

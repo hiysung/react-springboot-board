@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Nav } from "react-bootstrap";
 
 import styles from "css/Login/Login.module.css";
+import axios from "axios";
 
 function Login(props) {
   const [userId, setUserId] = useState("");   // 아이디
@@ -13,7 +14,38 @@ function Login(props) {
   const onLogin = () => {
     console.log(userId);
     console.log(userPwd);
+
+    if(userId === "") {
+      alert("아이디를 입력해주세요.");
+      return false;
+    }
+
+    if(userPwd === "") {
+      alert("비밀번호를 입력해주세요.");
+      return false;
+    }
+
+    singIn();
   };
+
+  const singIn = async () => {
+    let response, data;
+
+    try {
+      response = await axios.post("/account/singIn", {
+          id : userId
+        , password : userPwd
+      });
+
+      data = await response.data;
+      console.log(data);
+    }
+    catch(error) {
+      console.log(error);
+    }
+
+  }
+
   const getUserId = (e) => {
     setUserId(e.target.value);
   };
