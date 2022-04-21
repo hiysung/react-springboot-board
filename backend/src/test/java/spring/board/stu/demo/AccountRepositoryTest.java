@@ -15,10 +15,10 @@ public class AccountRepositoryTest {
     @Autowired
     AccountRepository accountRepository;
 
-    @AfterEach
-    public void cleanUp() {
-        accountRepository.deleteAll();
-    }
+//    @AfterEach
+//    public void cleanUp() {
+//        accountRepository.deleteAll();
+//    }
 
     @Test
     public void registerAccount() {
